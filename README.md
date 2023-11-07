@@ -66,3 +66,9 @@ Thanks, @barinek
 
 © 2021 by Initial Capacity, Inc. All rights reserved.
 
+# Completion Notice
+
+This exercise has been successfully completed by Tyler Te, specifically the Java portion. The Kotlin portion remains incomplete.
+
+© 2023 Tyler Te. All rights reserved.
+
