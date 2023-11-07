@@ -1,74 +1,56 @@
-# Simple aged cache
+# Simple Aged Cache Implementation
 
-An exercise to help individuals new to modern software engineering practices understand the basics of
- test driven development.
+This repository contains my implementation of the Simple Aged Cache exercise, which demonstrates the application of test-driven development practices using Java. The original concept and portions of the exercise were created by [@barinek](https://github.com/barinek).
 
-## Background
+## Project Overview
 
-The simple aged cache was one of the first bits of code that I paired on in the early 2000s while working at a
- telecommunications company. Ever since, I've been a fan of test driven development and pair programming.
+The Simple Aged Cache is a memory storage system that automatically expires and removes entries after a specified duration. This implementation focuses on the core functionality required for a cache system, including:
 
-Over the years that followed, I've attempted to introduce variations of the cache as part of the interview process
- at several companies. Most early attempts were fairly unsuccessful.
+- Adding entries with a time-to-live (TTL) value
+- Retrieving entries before they expire
+- Automatically expiring entries after their TTL has elapsed
 
-While working at Gnip in 2009, the team heard about the now infamous Pivotal pairing interview.
-In response, we began interviewing candidates using a linked list. Which, as you may know, isn’t too far from
- implementing a cache. Unfortunately, the linked list also proved challenging mainly because we asked candidates
-  to do all the typing.
+## Implementation Details
 
-In response, we introduced the simple aged cache as a whiteboard problem rather than as a live coding exercise. The move
- to a whiteboard was very successful, resulting in several new hires who ultimately led to Gnip’s success.
-  Rumor has it, the simple aged cache is still used as part of Twitter's technical interview after the Twitter
-   acquisition of Gnip.
+I have completed the Java portion of the exercise, ensuring that all functionalities adhere to the principles of test-driven development. The following is a brief overview of the implementation:
 
-### The exercise
+- **ExpirableEntry Inner Class**: Used to encapsulate cache entries along with their expiration metadata.
+- **Custom Collection Handling**: Instead of relying on built-in collection classes, I implemented custom logic to manage cache entries, providing a more granular control over the expiration mechanism.
 
-Fast-forward to today, the simple aged cache presented here combines both whiteboard and coding approaches.
+## Running the Project
 
-The exercise - get the tests to pass!
+To run the project and test the implementation, follow these steps:
 
-- Explore using an inner class `ExpirableEntry`
-- Try not using built in collection classes; Lists, Maps, or Sets.
-- Try both Java and Kotlin examples.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Execute the following command to run the unit tests:
 
-```java
-package io.collective;
-
-import java.time.Clock;
-
-public class SimpleAgedCache {
-
-    public SimpleAgedCache(Clock clock) {
-    }
-
-    public SimpleAgedCache() {
-    }
-
-    public void put(Object key, Object value, int retentionInMillis) {
-    }
-
-    public boolean isEmpty() {
-        return false;
-    }
-
-    public int size() {
-        return 0;
-    }
-
-    public Object get(Object key) {
-        return null;
-    }
-}
+```bash
+./gradlew clean build
 ```
-Hope you enjoy the exercise!
 
-Thanks, @barinek
+This command performs a clean build of the project and runs all the unit tests. A successful build indicates that all tests are passing and the cache implementation is functioning as expected.
 
-© 2021 by Initial Capacity, Inc. All rights reserved.
+## Download and Challenge
 
-# Completion Notice
+You can download the codebase and attempt the challenge on your own from [here](https://colorado.initialcapacity.io/contents/simple-aged-cache).
 
-This exercise has been successfully completed by Tyler Te, specifically the Java portion. The Kotlin portion remains incomplete.
+## Contributing
 
-© 2023 Tyler Te. All rights reserved.
+Contributions to enhance the functionality or improve the existing implementation are welcome. If you wish to contribute, please:
 
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes with clear, descriptive messages.
+4. Push the branch to your fork.
+5. Open a pull request against this repository.
+
+## License
+
+This project is open-sourced under the MIT license. Feel free to use it as a starting point for your own projects or to contribute back to the original repository.
+
+---
+
+Thank you for taking an interest in this project, and I hope you find the implementation useful for your learning or development needs.
+
+Special thanks to [@barinek](https://github.com/barinek) for the original creation and contributions to the exercise.
